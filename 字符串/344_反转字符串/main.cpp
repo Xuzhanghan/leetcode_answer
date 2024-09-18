@@ -4,6 +4,7 @@
 #include <algorithm>//含有swap,max_element函数
 using namespace std;
 //c++中有swap函数
+//c++提供了库函数：reverse(s.begin(),s.end());(在algorithm中)
 void reverseString(vector<char>& s) {
     int len=s.size();
     int left=0;
