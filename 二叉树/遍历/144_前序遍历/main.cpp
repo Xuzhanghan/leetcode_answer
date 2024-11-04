@@ -11,7 +11,17 @@
  */
 class Solution {
 public:
+    void preorder(TreeNode* root,vector<int>& result){
+        if(root==nullptr){
+            return;
+        }
+        result.push_back(root->val);
+        preorder(root->left,result);//注意：对于结构体，访问成员变量时，如果是指针使用“->”，如果是自身才使用“.”
+        preorder(root->right,result);
+    }
     vector<int> preorderTraversal(TreeNode* root) {
-        
+        vector<int> result;
+        preorder(root,result);
+        return result;
     }
 };
